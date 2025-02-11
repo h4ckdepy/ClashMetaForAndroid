@@ -79,9 +79,9 @@ jobs:
 
       - name: Signing properties
         env:
-          SIGNING_STORE_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
-          SIGNING_KEY_ALIAS: ${{ secrets.SIGNING_KEY_ALIAS }}
-          SIGNING_KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
+          SIGNING_STORE_PASSWORD: "123456"
+          SIGNING_KEY_ALIAS: "key"
+          SIGNING_KEY_PASSWORD: "123456"
         run: |
           touch signing.properties
           echo keystore.password="$SIGNING_STORE_PASSWORD" > signing.properties
